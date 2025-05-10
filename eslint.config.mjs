@@ -13,7 +13,9 @@ const eslintConfig = [
   {
     ignores: ['.next/**'],
   },
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+  ...compat.config({
+    extends: ['next/core-web-vitals', 'next/typescript', 'next', 'prettier'],
+  }),
+]
 
 export default eslintConfig;
